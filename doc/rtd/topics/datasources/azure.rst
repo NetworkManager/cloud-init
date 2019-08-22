@@ -37,7 +37,7 @@ To find the endpoint, we now leverage the dhcp client's ability to log its
 known values on exit.  The endpoint server is special DHCP option 245.
 Depending on your networking stack, this can be done
 by calling a script in /etc/dhcp/dhclient-exit-hooks or a file in
-/etc/NetworkManager/dispatcher.d.  Both of these call a sub-command
+/usr/lib/NetworkManager/dispatcher.d.  Both of these call a sub-command
 'dhclient_hook' of cloud-init itself. This sub-command will write the client
 information in json format to /run/cloud-init/dhclient.hook/<interface>.json.
 

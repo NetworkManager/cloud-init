@@ -261,9 +261,9 @@ data_files = [
 ]
 if os.uname()[0] != 'FreeBSD':
     data_files.extend([
-        (ETC + '/NetworkManager/dispatcher.d/',
-         ['tools/hook-network-manager']),
         (ETC + '/dhcp/dhclient-exit-hooks.d/', ['tools/hook-dhclient']),
+        (USR + '/lib/NetworkManager/dispatcher.d/',
+         ['tools/hook-network-manager']),
         (LIB + '/udev/rules.d', [f for f in glob('udev/*.rules')])
     ])
 # Use a subclass for install that handles
